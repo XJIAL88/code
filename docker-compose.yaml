@@ -1,0 +1,10 @@
+colourlife_czy_ope_platform:
+  image: "${image_name}"
+  volumes:
+    - "/etc/localtime:/etc/localtime"
+    - "/data/logs/php/colourlife_czy_ope_platform/nginx/:/var/log/nginx/"
+    - "/data/logs/php/colourlife_czy_ope_platform/storage/logs/:/var/www/html/storage/logs/"
+    - "/data/logs/php/colourlife_czy_ope_platform/upload/:/var/www/html/public/upload/"
+  ports:
+    - "6090:6000"
+  restart: always
